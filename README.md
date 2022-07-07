@@ -6,13 +6,13 @@ My motivation for forking this at all is that EternalBlue primarily relies on a 
 
 In the end, your silent customization from this script should come from the payload itself, which should be encoded / self cleaning / etc, and not rely on SMB or any services it may create to do that for you.
 
-TODO:
-✅ Abstract out the payload sending code
+TODO, by success:
+* ✅ Abstract out the payload sending code
    * New syntax: zzz_exploit.py IP payload.exe [pipe]
-✅ Experiment with different file types, expanding to BAT,PS files
+* ✅ Experiment with different file types, expanding to BAT,PS files
    * Doesnt work!
-❌ See what else the SYSTEM level services are able to execute
-❌ Execute arbitrary commands directly in the shell, and not rely on a un/staged payload
+* ❌ See what else the SYSTEM level services are able to execute
+* ❌ Execute arbitrary commands directly in the shell, and not rely on a un/staged payload
  
 ## Original Description
 
