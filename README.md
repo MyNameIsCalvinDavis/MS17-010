@@ -1,5 +1,21 @@
 # MS17-010
 
+This repo forks worawit/MS17-010 to add functionality to zzz_exploit.py. 
+
+My motivation for forking this at all is that EternalBlue primarily relies on a payload sent through the SMB connection, perhaps generated through msfvenom, which seems very loud to me. I decided to try to remediate this by implementing some RCE instead of a binary executed by the generated service, although it turns out services can only run binaries and not anything else.
+
+In the end, your silent customization from this script should come from the payload itself, which should be encoded / self cleaning / etc, and not rely on SMB or any services it may create to do that for you.
+
+TODO:
+✅ Abstract out the payload sending code
+   * New syntax: zzz_exploit.py IP payload.exe [pipe]
+✅ Experiment with different file types, expanding to BAT,PS files
+   * Doesnt work!
+❌ See what else the SYSTEM level services are able to execute
+❌ Execute arbitrary commands directly in the shell, and not rely on a un/staged payload
+ 
+## Original Description
+
 This repository is for public my work on MS17-010. I have no plan to do any support. **All support issues will not get response from me**.
 
 ## Files
